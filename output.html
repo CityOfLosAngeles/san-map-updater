@@ -1,0 +1,504 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_4c33cc19595242c69d192b9dc4f65e43 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_4c33cc19595242c69d192b9dc4f65e43" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_4c33cc19595242c69d192b9dc4f65e43 = L.map('map_4c33cc19595242c69d192b9dc4f65e43', {
+                                           center:[34.0407,-118.2468],
+                                           zoom: 12,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_f23d7ff66fd3462a8887976d0d1202ac = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+
+        
+        
+            
+
+            var marker_67ea990db1f74bb581bc683ece3886b0 = L.marker(
+                [34.178670000000004,-118.49774],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_3d9d6d8e0e6e43a58b9730c302330aac = L.popup({maxWidth: '300'});
+
+            
+                var html_a802533a2c2f477886cd3589b4a0d387 = $('         <div id="html_a802533a2c2f477886cd3589b4a0d387"                 style="width: 100.0%; height: 100.0%;">                 Bull Creek Sepulveda Basin</div>                 ')[0];
+                popup_3d9d6d8e0e6e43a58b9730c302330aac.setContent(html_a802533a2c2f477886cd3589b4a0d387);
+            
+
+            marker_67ea990db1f74bb581bc683ece3886b0.bindPopup(popup_3d9d6d8e0e6e43a58b9730c302330aac);
+
+            
+        
+        
+            
+
+            var marker_5c074647f58949be95520cf725fc8dd3 = L.marker(
+                [34.21897,-118.14581000000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_6ffd808a274d40d4bbc88a8ef1cf65b7 = L.popup({maxWidth: '300'});
+
+            
+                var html_ef7ddb86e4184913a895f90876721d34 = $('         <div id="html_ef7ddb86e4184913a895f90876721d34"                 style="width: 100.0%; height: 100.0%;">                 Millard Campground</div>                 ')[0];
+                popup_6ffd808a274d40d4bbc88a8ef1cf65b7.setContent(html_ef7ddb86e4184913a895f90876721d34);
+            
+
+            marker_5c074647f58949be95520cf725fc8dd3.bindPopup(popup_6ffd808a274d40d4bbc88a8ef1cf65b7);
+
+            
+        
+        
+            
+
+            var marker_bc185c5f9bf54488bab5f04fe548bbf6 = L.marker(
+                [34.19658,-118.10224],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_8e2a37f4e3564747a318d395a1cfba95 = L.popup({maxWidth: '300'});
+
+            
+                var html_38fe5c6d7b1b41d2accccaa908951fc1 = $('         <div id="html_38fe5c6d7b1b41d2accccaa908951fc1"                 style="width: 100.0%; height: 100.0%;">                 Eaton Canyon</div>                 ')[0];
+                popup_8e2a37f4e3564747a318d395a1cfba95.setContent(html_38fe5c6d7b1b41d2accccaa908951fc1);
+            
+
+            marker_bc185c5f9bf54488bab5f04fe548bbf6.bindPopup(popup_8e2a37f4e3564747a318d395a1cfba95);
+
+            
+        
+        
+            
+
+            var marker_2f6c90fa3a8d475f8601a21c23aabe48 = L.marker(
+                [34.302440000000004,-118.25992],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_c95f4b1b1bef4455ac889203229a4e99 = L.popup({maxWidth: '300'});
+
+            
+                var html_3eae9909ebd64555aae674a753ca24b6 = $('         <div id="html_3eae9909ebd64555aae674a753ca24b6"                 style="width: 100.0%; height: 100.0%;">                 Big Tujunga Delta Flat</div>                 ')[0];
+                popup_c95f4b1b1bef4455ac889203229a4e99.setContent(html_3eae9909ebd64555aae674a753ca24b6);
+            
+
+            marker_2f6c90fa3a8d475f8601a21c23aabe48.bindPopup(popup_c95f4b1b1bef4455ac889203229a4e99);
+
+            
+        
+        
+            
+
+            var marker_7cbf49eff3c1406996f4a6428cd33030 = L.marker(
+                [34.26614,-118.14591999999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_4fadfcf3ef394d84842f7569ee5f6047 = L.popup({maxWidth: '300'});
+
+            
+                var html_5afafea626b040a98c9e19c95b837d9d = $('         <div id="html_5afafea626b040a98c9e19c95b837d9d"                 style="width: 100.0%; height: 100.0%;">                 Switzer Canyon</div>                 ')[0];
+                popup_4fadfcf3ef394d84842f7569ee5f6047.setContent(html_5afafea626b040a98c9e19c95b837d9d);
+            
+
+            marker_7cbf49eff3c1406996f4a6428cd33030.bindPopup(popup_4fadfcf3ef394d84842f7569ee5f6047);
+
+            
+        
+        
+            
+
+            var marker_e39fefb0183c445fa1aed39e8ce22c2c = L.marker(
+                [34.22188,-118.17768999999998],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_b4132d686ee34f9ba04094cd923089d6 = L.popup({maxWidth: '300'});
+
+            
+                var html_7b5e1fcb33ae4bfc82981175c3d8b35c = $('         <div id="html_7b5e1fcb33ae4bfc82981175c3d8b35c"                 style="width: 100.0%; height: 100.0%;">                 Gould Mesa Campground</div>                 ')[0];
+                popup_b4132d686ee34f9ba04094cd923089d6.setContent(html_7b5e1fcb33ae4bfc82981175c3d8b35c);
+            
+
+            marker_e39fefb0183c445fa1aed39e8ce22c2c.bindPopup(popup_b4132d686ee34f9ba04094cd923089d6);
+
+            
+        
+        
+            
+
+            var marker_ca0b0439dee14c889f23605856a977d9 = L.marker(
+                [34.21157,-118.01973000000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_c69a2ccdd660412f837eb0fec7faca96 = L.popup({maxWidth: '300'});
+
+            
+                var html_a4124f21f364454f8a66d1dd629aab2f = $('         <div id="html_a4124f21f364454f8a66d1dd629aab2f"                 style="width: 100.0%; height: 100.0%;">                 Sturtevant Falls</div>                 ')[0];
+                popup_c69a2ccdd660412f837eb0fec7faca96.setContent(html_a4124f21f364454f8a66d1dd629aab2f);
+            
+
+            marker_ca0b0439dee14c889f23605856a977d9.bindPopup(popup_c69a2ccdd660412f837eb0fec7faca96);
+
+            
+        
+        
+            
+
+            var marker_a072cddc2fc6436da7f21932d448debe = L.marker(
+                [34.19122,-118.01718000000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_25f8ca51a7fc42a280cd2b8ea3a1d915 = L.popup({maxWidth: '300'});
+
+            
+                var html_deb6e46516b445978d26b32a6b544702 = $('         <div id="html_deb6e46516b445978d26b32a6b544702"                 style="width: 100.0%; height: 100.0%;">                 Hermit Falls</div>                 ')[0];
+                popup_25f8ca51a7fc42a280cd2b8ea3a1d915.setContent(html_deb6e46516b445978d26b32a6b544702);
+            
+
+            marker_a072cddc2fc6436da7f21932d448debe.bindPopup(popup_25f8ca51a7fc42a280cd2b8ea3a1d915);
+
+            
+        
+        
+            
+
+            var marker_cb91c19d87834b98b1c26a9bc943844b = L.marker(
+                [34.266040000000004,-118.37548999999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_5f239e53ee7840569370f21378ab3e54 = L.popup({maxWidth: '300'});
+
+            
+                var html_c850e7dbda554b9a8346147cfd4c873b = $('         <div id="html_c850e7dbda554b9a8346147cfd4c873b"                 style="width: 100.0%; height: 100.0%;">                 Hansen Dam</div>                 ')[0];
+                popup_5f239e53ee7840569370f21378ab3e54.setContent(html_c850e7dbda554b9a8346147cfd4c873b);
+            
+
+            marker_cb91c19d87834b98b1c26a9bc943844b.bindPopup(popup_5f239e53ee7840569370f21378ab3e54);
+
+            
+        
+        
+            
+
+            var marker_4f0d9c51f838488698174415f8018bf9 = L.marker(
+                [34.108199,-118.25273999999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_e7e38c228ef24cf4a39af92baa8c3959 = L.popup({maxWidth: '300'});
+
+            
+                var html_428d7f1b59b04da39cdad88eaa6488fe = $('         <div id="html_428d7f1b59b04da39cdad88eaa6488fe"                 style="width: 100.0%; height: 100.0%;">                 Glendale Narrows</div>                 ')[0];
+                popup_e7e38c228ef24cf4a39af92baa8c3959.setContent(html_428d7f1b59b04da39cdad88eaa6488fe);
+            
+
+            marker_4f0d9c51f838488698174415f8018bf9.bindPopup(popup_e7e38c228ef24cf4a39af92baa8c3959);
+
+            
+        
+        
+            
+
+            var marker_cd46b4f4b59242d68c79a2c0a2f1badb = L.marker(
+                [34.08664,-118.22813000000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_de19b1a54f264374af8c7e4bb3cee73e = L.popup({maxWidth: '300'});
+
+            
+                var html_e8521816ff3f4927987174e46561c150 = $('         <div id="html_e8521816ff3f4927987174e46561c150"                 style="width: 100.0%; height: 100.0%;">                 Glendale Narrows</div>                 ')[0];
+                popup_de19b1a54f264374af8c7e4bb3cee73e.setContent(html_e8521816ff3f4927987174e46561c150);
+            
+
+            marker_cd46b4f4b59242d68c79a2c0a2f1badb.bindPopup(popup_de19b1a54f264374af8c7e4bb3cee73e);
+
+            
+        
+        
+            
+
+            var marker_8c21ee21b8d04b569de90888e43222cd = L.marker(
+                [34.179424,-118.50013],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_484a018cbf9d4725abcfca7950a93950 = L.popup({maxWidth: '300'});
+
+            
+                var html_c0a8fc74c3674b6aa54dd29c000dface = $('         <div id="html_c0a8fc74c3674b6aa54dd29c000dface"                 style="width: 100.0%; height: 100.0%;">                 LA River Sepulveda Basin</div>                 ')[0];
+                popup_484a018cbf9d4725abcfca7950a93950.setContent(html_c0a8fc74c3674b6aa54dd29c000dface);
+            
+
+            marker_8c21ee21b8d04b569de90888e43222cd.bindPopup(popup_484a018cbf9d4725abcfca7950a93950);
+
+            
+        
+        
+            
+
+            var marker_2a215acd53da4eb09a8d867b8e498d93 = L.marker(
+                [34.176161,-118.49148000000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_7708734d99dd46bdb0cd92bf7fe0822d = L.popup({maxWidth: '300'});
+
+            
+                var html_e483030e6d0849db93c45efbc90b87e9 = $('         <div id="html_e483030e6d0849db93c45efbc90b87e9"                 style="width: 100.0%; height: 100.0%;">                 LA River Sepulveda Basin</div>                 ')[0];
+                popup_7708734d99dd46bdb0cd92bf7fe0822d.setContent(html_e483030e6d0849db93c45efbc90b87e9);
+            
+
+            marker_2a215acd53da4eb09a8d867b8e498d93.bindPopup(popup_7708734d99dd46bdb0cd92bf7fe0822d);
+
+            
+        
+        
+            
+
+            var marker_e9e8cdea488a4326b27bf29d5231fada = L.marker(
+                [34.167636,-118.47437],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_4c33cc19595242c69d192b9dc4f65e43);
+            
+        
+            
+            var popup_9b78e393e42149dfa76c04774082d369 = L.popup({maxWidth: '300'});
+
+            
+                var html_5312dfaeb7a44f2cafe46872e7ecd582 = $('         <div id="html_5312dfaeb7a44f2cafe46872e7ecd582"                 style="width: 100.0%; height: 100.0%;">                 LA River Sepulveda Dam</div>                 ')[0];
+                popup_9b78e393e42149dfa76c04774082d369.setContent(html_5312dfaeb7a44f2cafe46872e7ecd582);
+            
+
+            marker_e9e8cdea488a4326b27bf29d5231fada.bindPopup(popup_9b78e393e42149dfa76c04774082d369);
+
+            
+        
+        
+        
+        </script>
+        
