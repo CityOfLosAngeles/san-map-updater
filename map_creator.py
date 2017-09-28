@@ -1,7 +1,3 @@
-
-# coding: utf-8
-
-
 import pandas as pd
 from scipy.stats import mstats
 import folium
@@ -38,8 +34,7 @@ def set_color(c):
     else:
         return 'lightgray'
 
-def lambda_job(event, context):
-
+if __name__ == '__main__':
     readings_df = pd.read_csv('https://docs.google.com/spreadsheets/d/1WuwQwoloZsbl9vJoMUj7COMhiPVo8SncIU85dG_vjow/export?gid=0&format=csv',
                               skiprows=[0,1,2])
     location_df = pd.read_csv('https://docs.google.com/spreadsheets/d/1WuwQwoloZsbl9vJoMUj7COMhiPVo8SncIU85dG_vjow/export?gid=1752938175&format=csv')
@@ -61,6 +56,7 @@ def lambda_job(event, context):
 
     readings.replace(to_replace='<10', value=5, inplace=True)
     readings.replace(to_replace='NS', value=np.nan, inplace=True)
+    readings.replace(to_replace='>24200', value=24200, inplace=True)
     output_color_data = {}
     colors = readings.apply(set_color)
 
@@ -74,8 +70,6 @@ def lambda_job(event, context):
     data = open('output.html', 'rb')
     s3.Bucket('la-san-readings-map').put_object(Key='output.html', Body=data)
 
-if __name__ == '__main__':
-    lambda_job('ev','con')
 
 
 
